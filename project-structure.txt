@@ -1,0 +1,12 @@
+sentiment-analysis-comments/
+├── data/
+│   └── comments.csv           # Dataset de entrada
+├── notebooks/
+│   └── sentiment_analysis.ipynb  # Experimentos no Jupyter
+├── src/
+│   ├── preprocess.py          # Script para limpeza de texto
+│   ├── train_model.py         # Script para treinar o modelo
+│   └── visualize.py           # Gráficos e relatórios
+├── README.md                  # Explicação do projeto
+├── requirements.txt           # Bibliotecas necessárias
+└── LICENSE                    # Licença do projeto
