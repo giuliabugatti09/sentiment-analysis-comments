@@ -1,6 +1,4 @@
 sentiment-analysis-comments/
-├── data/
-│   └── comments.csv           # Dataset de entrada
 ├── notebooks/
 │   └── sentiment_analysis.ipynb  # Experimentos no Jupyter
 ├── src/
