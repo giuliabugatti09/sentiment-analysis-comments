@@ -18,7 +18,7 @@ O modelo foi treinado, testado e avaliado com as seguintes métricas de performa
 
 O gráfico abaixo mostra a evolução da acurácia do modelo ao longo do treinamento.
 
-![Acurácia do Modelo](images/grafico-acuracia.png)
+![Acurácia do Modelo](images/grafico-acuracia)
 
 
 ## Instalação
