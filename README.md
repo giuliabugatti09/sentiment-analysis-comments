@@ -14,6 +14,13 @@ O modelo foi treinado, testado e avaliado com as seguintes métricas de performa
 - **Recall** (Revocação): 85% para resenhas negativas, 75% para resenhas positivas.
 - **F1-Score**: 0.81 para resenhas negativas, 0.79 para resenhas positivas.
 
+  ## Gráfico de Acurácia
+
+O gráfico abaixo mostra a evolução da acurácia do modelo ao longo do treinamento.
+
+![Acurácia do Modelo](images/acuracia_do_modelo.png)
+
+
 ## Instalação
 
 Para rodar este projeto, é necessário ter o Python instalado no seu computador. As bibliotecas que usamos são:
