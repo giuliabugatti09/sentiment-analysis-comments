@@ -1,6 +1,7 @@
 sentiment-analysis-comments/
 ├── notebooks/
-│   └── sentiment_analysis.ipynb  # Experimentos no Jupyter
+   └── sentiment_analysis.ipynb  # Experimentos no Jupyter
+   └── sentiment_analysis.colab  # Gráficos no Google Colab
 ├── src/
 │   ├── preprocess.py          # Script para limpeza de texto
 │   ├── train_model.py         # Script para treinar o modelo
