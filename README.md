@@ -32,7 +32,7 @@ Essas métricas indicam que o modelo apresenta um bom equilíbrio entre **precis
 📊 Resultados Visuais
 1. Gráfico de Acurácia:
 Mostra a evolução da acurácia do modelo durante o treinamento.
-<p align="center"> <img src="images/gráfico de acurácia.png" alt="Gráfico de Acurácia" width="70%"> </p>
+<p align="center"> <img src="images/Gráfico de Acurácia .png" alt="Gráfico de Acurácia" width="70%"> </p>
 
 2. Matriz de Confusão:
 Mostra a matriz de confusão normalizada, detalhando a performance do modelo em cada classe.
