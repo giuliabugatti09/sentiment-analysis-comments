@@ -29,72 +29,152 @@ Essas métricas indicam que o modelo apresenta um bom equilíbrio entre **precis
 
 ---
 
-📊 Resultados Visuais
-1. Gráfico de Acurácia:
-Mostra a evolução da acurácia do modelo durante o treinamento.
-<p align="center"> <img src="images/Gráfico de Acurácia .png" alt="Gráfico de Acurácia" width="70%"> </p>
+## 🛠️ Instalação e Configuração
 
-2. Matriz de Confusão:
-Mostra a matriz de confusão normalizada, detalhando a performance do modelo em cada classe.
-<p align="center"> <img src="images/Matriz de confusão.png" alt="Matriz de Confusão" width="70%"> </p>
+Para rodar este projeto, você precisará configurar o ambiente adequadamente. Abaixo, você encontrará as instruções passo a passo.
 
-3. Gráfico de Métricas:
-Compara Precision, Recall e F1-Score para as classes positiva e negativa.
-<p align="center"> <img src="images/Métricas de Desempenho.png" alt="Gráfico de Métricas" width="70%"> </p>
+### 1. Requisitos do Sistema
 
-4. Fluxograma Interativo:
-Um Sankey Diagram que ilustra o fluxo do projeto, desde o carregamento dos dados até a previsão.
-<p align="center"> <img src="images/Fluxograma do projeto.png" alt="Fluxo do projeto" width="70%"> </p>
+- **Python** 3.9 ou superior
+- **Sistema Operacional**: Windows, macOS ou Linux
 
-5. Exemplo de Entrada e Saída:
-Mostra um comentário analisado pelo modelo com a saída prevista (sentimento).
-<p align="center"> <img src="images/Exemplo-entrada e saída.png" alt="Exemplo de Entrada e Saída" width="70%"> </p>
+### 2. Dependências
 
----
+Este projeto usa as seguintes bibliotecas e frameworks:
 
-## 🛠️ Instalação
+- **NLTK**: Para o processamento de linguagem natural e carregamento do dataset IMDb.
+- **Scikit-learn**: Para a implementação do modelo Naive Bayes.
+- **Pandas**: Para manipulação de dados.
+- **Matplotlib**: Para visualização de gráficos.
+- **Seaborn**: Para visualizações mais avançadas.
+- **Plotly**: Para gráficos interativos, como o fluxograma.
 
-Para rodar este projeto, é necessário ter o **Python 3.x** instalado no seu computador. As bibliotecas utilizadas são:
+### 3. Instalação das Dependências
 
-NLTK
-Scikit-learn
-Pandas
-Matplotlib
-Seaborn
-Plotly
+Antes de rodar o código, é necessário instalar todas as dependências do projeto. Para isso, siga os passos abaixo:
 
-### Como instalar as dependências
+#### Passo 1: Clone o repositório
 
-Clone este repositório:
-
-```
+```bash
 git clone https://github.com/seu-usuario/sentiment-analysis.git
 cd sentiment-analysis
 ```
 
-Instale as dependências com o **pip**:
+#### Passo 2: Crie um ambiente virtual (opcional, mas recomendado)
 
-```
+Se você deseja usar um ambiente virtual, pode criar e ativar um com os seguintes comandos:
+
+- **Windows**:
+  ```bash
+  python -m venv venv
+  venv\Scripts\activate
+  ```
+
+- **Linux/macOS**:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+#### Passo 3: Instale as dependências
+
+Com o ambiente ativado, instale as dependências com o comando:
+
+```bash
 pip install -r requirements.txt
 ```
 
-Baixe os dados do **NLTK**:
+Esse comando vai instalar **NLTK**, **Scikit-learn**, **Pandas**, **Matplotlib**, **Seaborn** e **Plotly**.
 
-No código Python, o **NLTK** irá automaticamente baixar o dataset de resenhas de filmes. Se você for rodar localmente, apenas execute:
+### 4. Baixar o Dataset IMDb
+
+O dataset IMDb será automaticamente baixado pelo NLTK ao rodar o código, mas caso você deseje baixá-lo manualmente, basta rodar o seguinte comando no Python:
 
 ```python
 import nltk
 nltk.download('movie_reviews')
 ```
 
+### 5. Rodando o Código
+
+Após configurar o ambiente e instalar as dependências, você pode rodar o código principal. Dependendo de sua preferência, você pode executar o código de uma das seguintes formas:
+
+- **Notebook Jupyter/Colab**: Abra o arquivo `notebooks/sentiment_analysis.ipynb` no **Jupyter Notebook** ou **Google Colab** e execute as células.
+  
+- **Script Python**: Se preferir rodar o código como script, basta executar o arquivo `main_code.py`:
+
+  ```bash
+  python main_code.py
+  ```
+
+### 6. Executando o Modelo
+
+Ao rodar o código, o modelo será treinado automaticamente com o dataset IMDb e, em seguida, avaliado com as métricas de desempenho: **Acurácia**, **Precisão**, **Recall** e **F1-Score**.
+
+O código também gera gráficos interativos e visualizações, como:
+
+- **Gráfico de Acurácia**: Mostra a evolução da acurácia do modelo durante o treinamento.
+- **Matriz de Confusão**: Mostra a performance do modelo em cada classe (positiva e negativa).
+- **Gráfico de Métricas**: Compara Precision, Recall e F1-Score para as classes positivas e negativas.
+- **Fluxograma do Projeto**: Um Sankey Diagram mostrando o fluxo do projeto, desde o carregamento dos dados até a previsão.
+- **Exemplo de Entrada e Saída**: Mostra um comentário analisado pelo modelo com a saída prevista.
+
+## 📊 Resultados Visuais
+
+1. **Gráfico de Acurácia**: Mostra a evolução da acurácia do modelo durante o treinamento.
+
+<p align="center"> <img src="images/Gráfico de Acurácia .png" alt="Gráfico de Acurácia" width="70%"> </p>
+
+**Visualizar Gráfico de Acurácia**
+
+(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
+
+2. **Matriz de Confusão**: Mostra a matriz de confusão normalizada, detalhando a performance do modelo em cada classe.
+
+   **Visualizar Matriz de confusão**
+
+   (https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
+
+<p align="center"> <img src="images/Matriz de confusão.png" alt="Matriz de Confusão" width="70%"> </p>
+
+3. **Gráfico de Métricas**: Compara **Precision**, **Recall** e **F1-Score** para as classes **positiva** e **negativa**.
+
+<p align="center"> <img src="images/Métricas de Desempenho.png" alt="Gráfico de Métricas" width="70%"> </p>
+
+**Visualizar Gráfico de Métricas**
+
+(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
+
+4. **Fluxograma Interativo**: Um Sankey Diagram que ilustra o fluxo do projeto, desde o carregamento dos dados até a previsão. O fluxograma exibe de forma visual como os dados passam pelas diferentes etapas do processo, com cada uma representada em uma linha distinta:
+
+  - Carregamento dos dados: O dataset IMDb é carregado através do NLTK.
+  - Pré-processamento: As resenhas de filmes são limpas e transformadas para que possam ser analisadas pelo modelo.
+  - Treinamento: O modelo Naive Bayes é treinado com as resenhas processadas.
+  - Avaliação: O modelo é avaliado com as métricas de acurácia, precisão, recall e F1-score.
+  - Previsão: O modelo realiza a classificação de novas resenhas como positivas ou negativas.
+
+<p align="center"> <img src="images/Fluxograma do projeto.png" alt="Fluxo do projeto" width="70%"> </p>
+
+**Visualizar Fluxograma Interativo**
+
+(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
+
+5. **Exemplo de Entrada e Saída**: Mostra um comentário analisado pelo modelo com a saída prevista (sentimento).
+
+<p align="center"> <img src="images/Exemplo-entrada e saída.png" alt="Exemplo de Entrada e Saída" width="70%"> </p>
+
+**Visualizar Exemplo de entrada e saída**
+
+(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
+
+
 ---
 
-## ▶️ Como Rodar o Código
 
-Após configurar o ambiente, você pode rodar o código principal para **treinar** e **avaliar** o modelo:
 
-1. Abra o arquivo `main_code.py` ou o notebook `sentiment_analysis.ipynb`.
-2. Execute o código para **treinar o modelo** e avaliar seu desempenho.
+### 7. Resultados
+
+Após a execução, os resultados serão exibidos no console e os gráficos interativos serão gerados automaticamente.
 
 ---
 
@@ -107,3 +187,6 @@ Contribuições são **bem-vindas**! Se você tiver sugestões de melhorias ou q
 ## 📄 Licença
 
 Este projeto está licenciado sob a **Licença MIT** - veja o arquivo `LICENSE` para mais detalhes.
+
+---
+
