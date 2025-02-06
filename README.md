@@ -177,6 +177,9 @@ O código também gera gráficos interativos e visualizações, como:
 Após a execução, os resultados serão exibidos no console e os gráficos interativos serão gerados automaticamente.
 
 ---
+### 8. Conclusão
+
+Este projeto demonstrou a aplicação de técnicas de processamento de linguagem natural e aprendizado de máquina para análise de sentimentos em resenhas de filmes. Utilizando o corpus `movie_reviews` do NLTK, foi treinado um modelo de Naive Bayes Multinomial para classificar as resenhas como positivas ou negativas. A avaliação do modelo foi realizada com base em métricas de precisão, recall e F1-score, sendo as métricas visualizadas através de um gráfico de barras. Os resultados indicam um bom desempenho do modelo na classificação das resenhas, mostrando como técnicas de NLP podem ser eficazes na análise de sentimentos em textos.
 
 ## 🎉 Contribuições
 
