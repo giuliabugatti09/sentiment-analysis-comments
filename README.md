@@ -1,3 +1,5 @@
+<p align="center"> <img src="images/Captura de Tela 2025-02-05 às 23.28.21.png" alt="Gráfico de Acurácia" width="70%"> </p>
+
 # Análise de Sentimentos com Naive Bayes
 
 Este projeto tem como objetivo realizar a **análise de sentimentos** em resenhas de filmes utilizando o algoritmo **Naive Bayes**. O modelo foi treinado com o dataset **IMDb** disponibilizado pelo **NLTK**, e classifica as resenhas como **positivas** ou **negativas**.
