@@ -82,7 +82,6 @@ python src/main.py
 
 ```
 sentiment-analysis/
-├── data/                   # Dados brutos e processados
 ├── notebooks/              # Jupyter notebooks de análise
 │   └── sentiment_analysis.ipynb
 ├── src/                    # Código fonte
