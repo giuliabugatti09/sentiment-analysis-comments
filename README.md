@@ -1,6 +1,7 @@
 # 📊 Análise de Sentimentos com Naive Bayes - Classificação de Resenhas de Filmes
 
-![Banner do Projeto](images/banner_sentiment_analysis.png) *Se você tiver um banner ou imagem representativa*
+<p align="center"> <img src="images/capa.png"  width="100%" height="450vh"> </p>
+
 
 ## 🌟 Visão Geral
 
@@ -85,11 +86,12 @@ sentiment-analysis/
 ├── notebooks/              # Jupyter notebooks de análise
 │   └── sentiment_analysis.ipynb
 ├── src/                    # Código fonte
-│   ├── main.py             # Script principal
-│   ├── preprocessing.py    # Funções de pré-processamento
+│   ├── train_modelo.py             # Script de treinamento
+│   ├── preprocess.py    # Funções de pré-processamento
 │   └── visualization.py    # Geração de gráficos
 ├── images/                 # Visualizações e gráficos
 ├── requirements.txt        # Dependências
+├── project_structure.txt        # Estrutura do projeto
 └── README.md               # Este arquivo
 ```
 
@@ -99,7 +101,6 @@ Explore os resultados dinamicamente:
 
 1. **Fluxo do Processamento**  
    ![Fluxograma](images/Fluxograma%20do%20projeto.png)  
-   [Ver interativo](#) *(link para versão online)*
 
 2. **Evolução da Acurácia**  
    ![Acurácia](images/Gra%CC%81fico%20de%20Acura%CC%81cia%20.png)
@@ -164,7 +165,7 @@ Distribuído sob licença MIT. Veja `LICENSE` para mais informações.
 ## ✉️ Contato
 
 Giulia Bugatti - [seu_email@example.com](mailto:giuliabugatti02@gmail.com)  
-LinkedIn: [linkedin.com/in/giulianobugatti](https://linkedin.com/in/giulianobugatti)
+LinkedIn: [linkedin.com/in/giulianobugatti](https://www.linkedin.com/in/giulia-bugatti-fonseca-226955267/)
 
 ---
 
