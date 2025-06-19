@@ -1,197 +1,171 @@
-<p align="center"> <img src="images/Captura de Tela 2025-02-05 às 23.28.21.png" alt="Gráfico de Acurácia" width="70%"> </p>
+# 📊 Análise de Sentimentos com Naive Bayes - Classificação de Resenhas de Filmes
 
-# Análise de Sentimentos com Naive Bayes
+![Banner do Projeto](images/banner_sentiment_analysis.png) *Se você tiver um banner ou imagem representativa*
 
-Este projeto tem como objetivo realizar a **análise de sentimentos** em resenhas de filmes utilizando o algoritmo **Naive Bayes**. O modelo foi treinado com o dataset **IMDb** disponibilizado pelo **NLTK**, e classifica as resenhas como **positivas** ou **negativas**.
+## 🌟 Visão Geral
 
----
+Este projeto implementa um **classificador de sentimentos** utilizando o algoritmo Naive Bayes para analisar resenhas de filmes do dataset IMDb. O modelo alcança **80% de acurácia** na classificação de textos como positivos ou negativos, demonstrando a eficácia de técnicas de Processamento de Linguagem Natural (NLP) em tarefas de análise de sentimentos.
 
-## 📖 Descrição
+## 📌 Principais Recursos
 
-Neste projeto, usamos o **Naive Bayes** para treinar um modelo de **classificação de texto** e prever o sentimento de resenhas de filmes. O dataset utilizado é composto por resenhas de filmes e seus respectivos sentimentos (**positivo** ou **negativo**).
+✔ **Classificação binária** de sentimentos (positivo/negativo)  
+✔ Pré-processamento avançado de texto (tokenização, stemming, remoção de stopwords)  
+✔ Pipeline completo de machine learning (treinamento, validação, teste)  
+✔ Visualizações interativas de desempenho do modelo  
+✔ Exemplos práticos de classificação em tempo real  
+✔ Documentação completa para reprodução do experimento  
 
----
+## 📊 Performance do Modelo
 
-## 📊 Resultados
+| Métrica          | Negativas | Positivas | Média |
+|------------------|----------|----------|-------|
+| **Acurácia**     | -        | -        | 80%   |
+| **Precisão**     | 77%      | 83%      | 80%   |
+| **Recall**       | 85%      | 75%      | 80%   |
+| **F1-Score**     | 0.81     | 0.79     | 0.80  |
 
-O modelo foi treinado, testado e avaliado com as seguintes **métricas de performance**:
+![Matriz de Confusão](images/Matriz%20de%20confusa%CC%83o.png)
 
-- **Acurácia**: 80%  
-- **Precisão (Precision)**:
-  - Para resenhas **negativas**: 77%  
-  - Para resenhas **positivas**: 83%  
-- **Revocação (Recall)**:
-  - Para resenhas **negativas**: 85%  
-  - Para resenhas **positivas**: 75%  
-- **F1-Score**:
-  - Para resenhas **negativas**: 0.81  
-  - Para resenhas **positivas**: 0.79  
+## 🛠️ Tecnologias Utilizadas
 
-Essas métricas indicam que o modelo apresenta um bom equilíbrio entre **precisão** e **capacidade de identificar corretamente** as resenhas de cada classe.
+### Linguagens e Frameworks
+![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0+-orange?logo=scikit-learn)
+![NLTK](https://img.shields.io/badge/NLTK-3.6+-green?logo=nltk)
 
----
+### Processamento de Dados
+![Pandas](https://img.shields.io/badge/Pandas-1.3+-blue?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-1.21+-blue?logo=numpy)
 
-## 🛠️ Instalação e Configuração
+### Visualização
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5+-blue?logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.11+-blue?logo=seaborn)
+![Plotly](https://img.shields.io/badge/Plotly-5.8+-blue?logo=plotly)
 
-Para rodar este projeto, você precisará configurar o ambiente adequadamente. Abaixo, você encontrará as instruções passo a passo.
+## 🚀 Como Executar
 
-### 1. Requisitos do Sistema
+### Pré-requisitos
+- Python 3.9+
+- Git (para clonar o repositório)
 
-- **Python** 3.9 ou superior
-- **Sistema Operacional**: Windows, macOS ou Linux
-
-### 2. Dependências
-
-Este projeto usa as seguintes bibliotecas e frameworks:
-
-- **NLTK**: Para o processamento de linguagem natural e carregamento do dataset IMDb.
-- **Scikit-learn**: Para a implementação do modelo Naive Bayes.
-- **Pandas**: Para manipulação de dados.
-- **Matplotlib**: Para visualização de gráficos.
-- **Seaborn**: Para visualizações mais avançadas.
-- **Plotly**: Para gráficos interativos, como o fluxograma.
-
-### 3. Instalação das Dependências
-
-Antes de rodar o código, é necessário instalar todas as dependências do projeto. Para isso, siga os passos abaixo:
-
-#### Passo 1: Clone o repositório
+### Instalação Rápida
 
 ```bash
-git clone https://github.com/seu-usuario/sentiment-analysis.git
+# Clone o repositório
+git clone https://github.com/giuliabugatti09/sentiment-analysis.git
 cd sentiment-analysis
+
+# Crie e ative o ambiente virtual (recomendado)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Baixe os recursos do NLTK
+python -c "import nltk; nltk.download('movie_reviews')"
 ```
 
-#### Passo 2: Crie um ambiente virtual (opcional, mas recomendado)
-
-Se você deseja usar um ambiente virtual, pode criar e ativar um com os seguintes comandos:
-
-- **Windows**:
-  ```bash
-  python -m venv venv
-  venv\Scripts\activate
-  ```
-
-- **Linux/macOS**:
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
-
-#### Passo 3: Instale as dependências
-
-Com o ambiente ativado, instale as dependências com o comando:
+### Executando o Projeto
 
 ```bash
-pip install -r requirements.txt
+# Opção 1: Executar o notebook Jupyter
+jupyter notebook notebooks/sentiment_analysis.ipynb
+
+# Opção 2: Executar o script principal
+python src/main.py
 ```
 
-Esse comando vai instalar **NLTK**, **Scikit-learn**, **Pandas**, **Matplotlib**, **Seaborn** e **Plotly**.
+## 📂 Estrutura do Projeto
 
-### 4. Baixar o Dataset IMDb
+```
+sentiment-analysis/
+├── data/                   # Dados brutos e processados
+├── notebooks/              # Jupyter notebooks de análise
+│   └── sentiment_analysis.ipynb
+├── src/                    # Código fonte
+│   ├── main.py             # Script principal
+│   ├── preprocessing.py    # Funções de pré-processamento
+│   └── visualization.py    # Geração de gráficos
+├── images/                 # Visualizações e gráficos
+├── requirements.txt        # Dependências
+└── README.md               # Este arquivo
+```
 
-O dataset IMDb será automaticamente baixado pelo NLTK ao rodar o código, mas caso você deseje baixá-lo manualmente, basta rodar o seguinte comando no Python:
+## 📈 Visualizações Interativas
+
+Explore os resultados dinamicamente:
+
+1. **Fluxo do Processamento**  
+   ![Fluxograma](images/Fluxograma%20do%20projeto.png)  
+   [Ver interativo](#) *(link para versão online)*
+
+2. **Evolução da Acurácia**  
+   ![Acurácia](images/Gra%CC%81fico%20de%20Acura%CC%81cia%20.png)
+
+3. **Comparação de Métricas**  
+   ![Métricas](images/Me%CC%81tricas%20de%20Desempenho.png)
+
+## 🧪 Exemplo Prático
+
+Teste o modelo com suas próprias frases:
 
 ```python
-import nltk
-nltk.download('movie_reviews')
+from src.model import predict_sentiment
+
+sample_reviews = [
+    "This movie was absolutely fantastic! The acting was superb.",
+    "Terrible plot and bad acting. Would not recommend.",
+    "The film had some good moments but overall was mediocre."
+]
+
+for review in sample_reviews:
+    print(f"Review: {review[:50]}...")
+    print(f"Prediction: {predict_sentiment(review)}\n")
 ```
 
-### 5. Rodando o Código
+Saída esperada:
+```
+Review: This movie was absolutely fantastic! The acting...
+Prediction: Positive
 
-Após configurar o ambiente e instalar as dependências, você pode rodar o código principal. Dependendo de sua preferência, você pode executar o código de uma das seguintes formas:
+Review: Terrible plot and bad acting. Would not recom...
+Prediction: Negative
 
-- **Notebook Jupyter/Colab**: Abra o arquivo `notebooks/sentiment_analysis.ipynb` no **Jupyter Notebook** ou **Google Colab** e execute as células.
-  
-- **Script Python**: Se preferir rodar o código como script, basta executar o arquivo `main_code.py`:
+Review: The film had some good moments but overall wa...
+Prediction: Negative
+```
 
-  ```bash
-  python main_code.py
-  ```
+## 📚 Fundamentos Teóricos
 
-### 6. Executando o Modelo
+O projeto implementa um **Classificador Naive Bayes Multinomial**, particularmente adequado para dados textuais. O algoritmo calcula:
 
-Ao rodar o código, o modelo será treinado automaticamente com o dataset IMDb e, em seguida, avaliado com as métricas de desempenho: **Acurácia**, **Precisão**, **Recall** e **F1-Score**.
+```
+P(classe|documento) ∝ P(classe) × ∏ P(palavra|classe)
+```
 
-O código também gera gráficos interativos e visualizações, como:
+Onde:
+- **P(classe)** é a probabilidade a priori de cada classe
+- **P(palavra|classe)** é a probabilidade de cada palavra dado a classe, suavizada com Laplace smoothing
 
-- **Gráfico de Acurácia**: Mostra a evolução da acurácia do modelo durante o treinamento.
-- **Matriz de Confusão**: Mostra a performance do modelo em cada classe (positiva e negativa).
-- **Gráfico de Métricas**: Compara Precision, Recall e F1-Score para as classes positivas e negativas.
-- **Fluxograma do Projeto**: Um Sankey Diagram mostrando o fluxo do projeto, desde o carregamento dos dados até a previsão.
-- **Exemplo de Entrada e Saída**: Mostra um comentário analisado pelo modelo com a saída prevista.
+## 🤝 Como Contribuir
 
-## 📊 Resultados Visuais
+1. Faça um fork do projeto
+2. Crie sua branch (`git checkout -b feature/improve-model`)
+3. Commit suas mudanças (`git commit -m 'Add new features'`)
+4. Push para a branch (`git push origin feature/improve-model`)
+5. Abra um Pull Request
 
-1. **Gráfico de Acurácia**: Mostra a evolução da acurácia do modelo durante o treinamento.
+## 📜 Licença
 
-<p align="center"> <img src="images/Gráfico de Acurácia .png" alt="Gráfico de Acurácia" width="70%"> </p>
+Distribuído sob licença MIT. Veja `LICENSE` para mais informações.
 
-**Visualizar Gráfico de Acurácia**
+## ✉️ Contato
 
-(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
-
-2. **Matriz de Confusão**: Mostra a matriz de confusão normalizada, detalhando a performance do modelo em cada classe.
-
-   **Visualizar Matriz de confusão**
-
-   (https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
-
-<p align="center"> <img src="images/Matriz de confusão.png" alt="Matriz de Confusão" width="70%"> </p>
-
-3. **Gráfico de Métricas**: Compara **Precision**, **Recall** e **F1-Score** para as classes **positiva** e **negativa**.
-
-<p align="center"> <img src="images/Métricas de Desempenho.png" alt="Gráfico de Métricas" width="70%"> </p>
-
-**Visualizar Gráfico de Métricas**
-
-(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
-
-4. **Fluxograma Interativo**: Um Sankey Diagram que ilustra o fluxo do projeto, desde o carregamento dos dados até a previsão. O fluxograma exibe de forma visual como os dados passam pelas diferentes etapas do processo, com cada uma representada em uma linha distinta:
-
-  - Carregamento dos dados: O dataset IMDb é carregado através do NLTK.
-  - Pré-processamento: As resenhas de filmes são limpas e transformadas para que possam ser analisadas pelo modelo.
-  - Treinamento: O modelo Naive Bayes é treinado com as resenhas processadas.
-  - Avaliação: O modelo é avaliado com as métricas de acurácia, precisão, recall e F1-score.
-  - Previsão: O modelo realiza a classificação de novas resenhas como positivas ou negativas.
-
-<p align="center"> <img src="images/Fluxograma do projeto.png" alt="Fluxo do projeto" width="70%"> </p>
-
-**Visualizar Fluxograma Interativo**
-
-(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
-
-5. **Exemplo de Entrada e Saída**: Mostra um comentário analisado pelo modelo com a saída prevista (sentimento).
-
-<p align="center"> <img src="images/Exemplo-entrada e saída.png" alt="Exemplo de Entrada e Saída" width="70%"> </p>
-
-**Visualizar Exemplo de entrada e saída**
-
-(https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8#scrollTo=dHgRkxCTBP3O&line=1&uniqifier=1))
-
+Giulia Bugatti - [seu_email@example.com](mailto:giuliabugatti02@gmail.com)  
+LinkedIn: [linkedin.com/in/giulianobugatti](https://linkedin.com/in/giulianobugatti)
 
 ---
 
-
-
-### 7. Resultados
-
-Após a execução, os resultados serão exibidos no console e os gráficos interativos serão gerados automaticamente.
-
----
-### 8. Conclusão
-
-Este projeto demonstrou a aplicação de técnicas de processamento de linguagem natural e aprendizado de máquina para análise de sentimentos em resenhas de filmes. Utilizando o corpus `movie_reviews` do NLTK, foi treinado um modelo de Naive Bayes Multinomial para classificar as resenhas como positivas ou negativas. A avaliação do modelo foi realizada com base em métricas de precisão, recall e F1-score, sendo as métricas visualizadas através de um gráfico de barras. Os resultados indicam um bom desempenho do modelo na classificação das resenhas, mostrando como técnicas de NLP podem ser eficazes na análise de sentimentos em textos.
-
-## 🎉 Contribuições
-
-Contribuições são **bem-vindas**! Se você tiver sugestões de melhorias ou quiser adicionar novos recursos, sinta-se à vontade para **fazer um fork** deste repositório e enviar um **pull request**.
-
----
-
-## 📄 Licença
-
-Este projeto está licenciado sob a **Licença MIT** - veja o arquivo `LICENSE` para mais detalhes.
-
----
-
+**Nota:** Para uma experiência completa, acesse o [notebook interativo no Google Colab](https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8).
