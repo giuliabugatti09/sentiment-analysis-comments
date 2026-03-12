@@ -1,171 +1,56 @@
-# 📊 Análise de Sentimentos com Naive Bayes - Classificação de Resenhas de Filmes
+# 🎭 NLP Sentiment Analysis: IMDb Review Classification
 
-<p align="center"> <img src="images/capa.png"  width="100%" height="450vh"> </p>
+> **Natural Language Processing (NLP)** engine designed to classify movie reviews using a Multinomial Naive Bayes architecture. This project achieves an **80% accuracy rate** by implementing a robust text-processing pipeline.
 
-
-## 🌟 Visão Geral
-
-Este projeto implementa um **classificador de sentimentos** utilizando o algoritmo Naive Bayes para analisar resenhas de filmes do dataset IMDb. O modelo alcança **80% de acurácia** na classificação de textos como positivos ou negativos, demonstrando a eficácia de técnicas de Processamento de Linguagem Natural (NLP) em tarefas de análise de sentimentos.
-
-## 📌 Principais Recursos
-
-✔ **Classificação binária** de sentimentos (positivo/negativo)  
-✔ Pré-processamento avançado de texto (tokenização, stemming, remoção de stopwords)  
-✔ Pipeline completo de machine learning (treinamento, validação, teste)  
-✔ Visualizações interativas de desempenho do modelo  
-✔ Exemplos práticos de classificação em tempo real  
-✔ Documentação completa para reprodução do experimento  
-
-## 📊 Performance do Modelo
-
-| Métrica          | Negativas | Positivas | Média |
-|------------------|----------|----------|-------|
-| **Acurácia**     | -        | -        | 80%   |
-| **Precisão**     | 77%      | 83%      | 80%   |
-| **Recall**       | 85%      | 75%      | 80%   |
-| **F1-Score**     | 0.81     | 0.79     | 0.80  |
-
-![Matriz de Confusão](images/Matriz%20de%20confusa%CC%83o.png)
-
-## 🛠️ Tecnologias Utilizadas
-
-### Linguagens e Frameworks
-![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0+-orange?logo=scikit-learn)
-![NLTK](https://img.shields.io/badge/NLTK-3.6+-green?logo=nltk)
-
-### Processamento de Dados
-![Pandas](https://img.shields.io/badge/Pandas-1.3+-blue?logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-1.21+-blue?logo=numpy)
-
-### Visualização
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5+-blue?logo=matplotlib)
-![Seaborn](https://img.shields.io/badge/Seaborn-0.11+-blue?logo=seaborn)
-![Plotly](https://img.shields.io/badge/Plotly-5.8+-blue?logo=plotly)
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-- Python 3.9+
-- Git (para clonar o repositório)
-
-### Instalação Rápida
-
-```bash
-# Clone o repositório
-git clone https://github.com/giuliabugatti09/sentiment-analysis.git
-cd sentiment-analysis
-
-# Crie e ative o ambiente virtual (recomendado)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-# Instale as dependências
-pip install -r requirements.txt
-
-# Baixe os recursos do NLTK
-python -c "import nltk; nltk.download('movie_reviews')"
-```
-
-### Executando o Projeto
-
-```bash
-# Opção 1: Executar o notebook Jupyter
-jupyter notebook notebooks/sentiment_analysis.ipynb
-
-# Opção 2: Executar o script principal
-python src/main.py
-```
-
-## 📂 Estrutura do Projeto
-
-```
-sentiment-analysis/
-├── notebooks/              # Jupyter notebooks de análise
-│   └── sentiment_analysis.ipynb
-├── src/                    # Código fonte
-│   ├── train_modelo.py             # Script de treinamento
-│   ├── preprocess.py    # Funções de pré-processamento
-│   └── visualization.py    # Geração de gráficos
-├── images/                 # Visualizações e gráficos
-├── requirements.txt        # Dependências
-├── project_structure.txt        # Estrutura do projeto
-└── README.md               # Este arquivo
-```
-
-## 📈 Visualizações Interativas
-
-Explore os resultados dinamicamente:
-
-1. **Fluxo do Processamento**  
-   ![Fluxograma](images/Fluxograma%20do%20projeto.png)  
-
-2. **Evolução da Acurácia**  
-   ![Acurácia](images/Gra%CC%81fico%20de%20Acura%CC%81cia%20.png)
-
-3. **Comparação de Métricas**  
-   ![Métricas](images/Me%CC%81tricas%20de%20Desempenho.png)
-
-## 🧪 Exemplo Prático
-
-Teste o modelo com suas próprias frases:
-
-```python
-from src.model import predict_sentiment
-
-sample_reviews = [
-    "This movie was absolutely fantastic! The acting was superb.",
-    "Terrible plot and bad acting. Would not recommend.",
-    "The film had some good moments but overall was mediocre."
-]
-
-for review in sample_reviews:
-    print(f"Review: {review[:50]}...")
-    print(f"Prediction: {predict_sentiment(review)}\n")
-```
-
-Saída esperada:
-```
-Review: This movie was absolutely fantastic! The acting...
-Prediction: Positive
-
-Review: Terrible plot and bad acting. Would not recom...
-Prediction: Negative
-
-Review: The film had some good moments but overall wa...
-Prediction: Negative
-```
-
-## 📚 Fundamentos Teóricos
-
-O projeto implementa um **Classificador Naive Bayes Multinomial**, particularmente adequado para dados textuais. O algoritmo calcula:
-
-```
-P(classe|documento) ∝ P(classe) × ∏ P(palavra|classe)
-```
-
-Onde:
-- **P(classe)** é a probabilidade a priori de cada classe
-- **P(palavra|classe)** é a probabilidade de cada palavra dado a classe, suavizada com Laplace smoothing
-
-## 🤝 Como Contribuir
-
-1. Faça um fork do projeto
-2. Crie sua branch (`git checkout -b feature/improve-model`)
-3. Commit suas mudanças (`git commit -m 'Add new features'`)
-4. Push para a branch (`git push origin feature/improve-model`)
-5. Abra um Pull Request
-
-## 📜 Licença
-
-Distribuído sob licença MIT. Veja `LICENSE` para mais informações.
-
-## ✉️ Contato
-
-Giulia Bugatti - [seu_email@example.com](mailto:giuliabugatti02@gmail.com)  
-LinkedIn: [linkedin.com/in/giulianobugatti](https://www.linkedin.com/in/giulia-bugatti-fonseca-226955267/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![NLTK](https://img.shields.io/badge/NLTK-3.6+-4EAA25?logo=python&logoColor=white)](https://www.nltk.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Latest-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 
 ---
 
-**Nota:** Para uma experiência completa, acesse o [notebook interativo no Google Colab](https://colab.research.google.com/drive/1zwU09L2hXFuFZFcfILG_vPO_4EUMH7T8).
+## 🎯 Project Scope
+The goal was to build a binary classifier capable of distinguishing between positive and negative sentiment in raw text. This is a foundational AI task with direct applications in customer feedback analysis and social media monitoring.
+
+
+
+## 🏗️ Technical Pipeline: From Raw Text to Features
+Text data requires rigorous cleaning before it can be processed by mathematical models. My pipeline includes:
+* **Tokenization & Cleaning:** Removing punctuation, HTML tags, and noise.
+* **Stopword Removal:** Filtering out high-frequency words that lack predictive signal.
+* **Stemming:** Reducing words to their root form (e.g., "running" → "run") to decrease feature dimensionality.
+* **Vectorization:** Transforming text into a numerical matrix (Bag-of-Words).
+
+---
+
+## 📊 Model Performance & Metrics
+The **Multinomial Naive Bayes** algorithm was chosen for its high efficiency and performance with high-dimensional sparse data (text).
+
+| Metric | Negative | Positive | Global Average |
+| :--- | :---: | :---: | :---: |
+| **Accuracy** | - | - | **80%** |
+| **Precision** | 77% | 83% | 80% |
+| **Recall** | 85% | 75% | 80% |
+| **F1-Score** | 0.81 | 0.79 | 0.80 |
+
+
+
+---
+
+## 🧪 Theoretical Foundation
+The model is based on the **Bayes' Theorem**, calculating the posterior probability of a class based on word frequency:
+
+$$P(class|doc) \propto P(class) \times \prod P(word|class)$$
+
+By applying **Laplace Smoothing**, the model ensures that new words found in testing don't result in zero probabilities, maintaining system robustness.
+
+---
+
+## 🚀 Usage & Deployment
+### Fast Execution
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Download NLTK resources and run
+python -c "import nltk; nltk.download('movie_reviews')"
+python src/main.py
