@@ -1,18 +1,14 @@
 sentiment-analysis-comments/
-├── .github/                  # CI/CD (Optional: GitHub Actions)
-├── assets/                   # Images and branding for README
-│   └── architecture_flow.png
-├── data/                     # Data samples or raw datasets (if applicable)
+
 ├── models/                   # Serialized model artifacts (Pickle files)
 │   ├── sentiment_model.pkl
 │   └── vectorizer.pkl
 ├── notebooks/                # Jupyter/Colab experiments and EDA
 │   └── sentiment_analysis.ipynb
 ├── src/                      # Source code for the ML pipeline
-│   ├── __init__.py           # Makes src a Python module
 │   ├── preprocess.py         # Text cleaning and tokenization logic
-│   ├── train.py              # Script to re-train the model
-│   └── utils.py              # Helper functions (plotting, metrics)
+│   ├── train_model.py              # Script to re-train the model
+│   └── visualize.py              # Helper functions (plotting, metrics)
 ├── app.py                    # Streamlit web application (renamed from deploy.py)
 ├── .gitignore                # Files to ignore (env, __pycache__, etc.)
 ├── LICENSE                   # Project license

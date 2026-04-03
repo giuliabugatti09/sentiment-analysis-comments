@@ -1,56 +1,94 @@
 # 🎭 NLP Sentiment Analysis: IMDb Review Classification
 
-> **Natural Language Processing (NLP)** engine designed to classify movie reviews using a Multinomial Naive Bayes architecture. This project achieves an **80% accuracy rate** by implementing a robust text-processing pipeline.
+> **Natural Language Processing (NLP)** engine designed to classify movie reviews using a Multinomial Naive Bayes architecture. This project implements a full pipeline from raw text processing to a live web deployment.
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![NLTK](https://img.shields.io/badge/NLTK-3.6+-4EAA25?logo=python&logoColor=white)](https://www.nltk.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Latest-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 
 ---
 
-## 🎯 Project Scope
-The goal was to build a binary classifier capable of distinguishing between positive and negative sentiment in raw text. This is a foundational AI task with direct applications in customer feedback analysis and social media monitoring.
+## 🎯 Project Overview
+This project addresses the challenge of binary sentiment classification. By training on the IMDb corpus, the model learns to identify linguistic patterns that distinguish a positive review from a negative one. 
 
-
-
-## 🏗️ Technical Pipeline: From Raw Text to Features
-Text data requires rigorous cleaning before it can be processed by mathematical models. My pipeline includes:
-* **Tokenization & Cleaning:** Removing punctuation, HTML tags, and noise.
-* **Stopword Removal:** Filtering out high-frequency words that lack predictive signal.
-* **Stemming:** Reducing words to their root form (e.g., "running" → "run") to decrease feature dimensionality.
-* **Vectorization:** Transforming text into a numerical matrix (Bag-of-Words).
+**Key Applications:**
+* 🗣️ **Brand Monitoring:** Real-time social media sentiment tracking.
+* 📈 **Market Research:** Automated analysis of customer feedback.
+* 🎬 **Entertainment:** Scaling movie and content rating systems.
 
 ---
 
-## 📊 Model Performance & Metrics
-The **Multinomial Naive Bayes** algorithm was chosen for its high efficiency and performance with high-dimensional sparse data (text).
+## 🏗️ Technical Pipeline
+The transition from unstructured text to machine-readable features follows a rigorous NLP workflow:
+
+1.  **Exploratory Data Analysis (EDA):** Identifying class balance and word frequency distributions.
+2.  **Text Preprocessing:** * **Tokenization:** Breaking sentences into individual terms.
+    * **Stopword Removal:** Eliminating noise words (e.g., "the", "a").
+    * **Normalization:** Lowercasing and removing special characters.
+3.  **Vectorization:** Converting text into a sparse matrix using `CountVectorizer` (Bag-of-Words).
+4.  **Modeling:** Training a **Multinomial Naive Bayes** classifier with Laplace Smoothing ($alpha=1.0$).
+5.  **Serialization:** Exporting model artifacts (`.pkl`) for inference using `joblib`.
+
+---
+
+## 📊 Performance Analysis
 
 | Metric | Negative | Positive | Global Average |
 | :--- | :---: | :---: | :---: |
-| **Accuracy** | - | - | **80%** |
-| **Precision** | 77% | 83% | 80% |
-| **Recall** | 85% | 75% | 80% |
-| **F1-Score** | 0.81 | 0.79 | 0.80 |
+| **Accuracy** | - | - | **80.0%** |
+| **Precision** | 77% | 83% | 80.0% |
+| **Recall** | 85% | 75% | 80.0% |
+| **F1-Score** | 0.81 | 0.79 | 0.80.0 |
 
-
-
----
-
-## 🧪 Theoretical Foundation
-The model is based on the **Bayes' Theorem**, calculating the posterior probability of a class based on word frequency:
-
-$$P(class|doc) \propto P(class) \times \prod P(word|class)$$
-
-By applying **Laplace Smoothing**, the model ensures that new words found in testing don't result in zero probabilities, maintaining system robustness.
+> *Insight: The model shows a slight bias towards identifying negative reviews (higher Recall), which is often preferable for identifying critical user pain points.*
 
 ---
 
-## 🚀 Usage & Deployment
-### Fast Execution
-```bash
-# Install dependencies
-pip install -r requirements.txt
+## 🚀 Deployment & Usage
 
-# Download NLTK resources and run
-python -c "import nltk; nltk.download('movie_reviews')"
-python src/main.py
+### 💻 Local Execution
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/giuliabugatti09/sentiment-analysis-comments.git](https://github.com/giuliabugatti09/sentiment-analysis-comments.git)
+   cd sentiment-analysis-comments
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit App:**
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 🧪 Mathematical Foundation
+The engine utilizes the **Multinomial Naive Bayes** algorithm, which assumes independence between features (words):
+
+$$P(c|x) = \frac{P(x|c)P(c)}{P(x)}$$
+
+Where:
+* $P(c|x)$ is the posterior probability of class $c$ (positive/negative) given predictor $x$ (text).
+* $P(x|c)$ is the likelihood of the word appearing in that class.
+
+---
+
+## 📂 Project Structure
+```text
+├── assets/               # Images and branding for README
+├── models/               # Serialized .pkl files (Model & Vectorizer)
+├── notebooks/            # Jupyter experiments & EDA
+├── src/                  # Core logic & utility scripts
+├── app.py                # Streamlit Web Interface
+└── requirements.txt      # Project dependencies
+```
+
+---
+
+## ✉️ Contact
+**Giulia Bugatti** - [LinkedIn](https://www.linkedin.com/in/giulia-bugatti-fonseca-226955267/)
+```
